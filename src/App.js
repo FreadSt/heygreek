@@ -40,7 +40,6 @@ function App() {
             window.removeEventListener("scroll", listenToScroll);
     }, [])
 
-
     const isMobile = window.matchMedia("(max-width: 430px)").matches
 
     const listenToScroll = () => {
