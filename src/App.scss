@@ -351,3 +351,37 @@
     }
   }
 }
+
+@media(min-width: 1366px) and (max-width:2260px){
+  .App{
+    .man{
+      position: absolute;
+      width: 510px;
+      height: 782px;
+      left: 6%;
+      z-index: 22;
+      bottom: 0;
+    }
+    .woman {
+      z-index: 22;
+      position: absolute;
+      width: 470px;
+      height: 752px;
+      left: 17%;
+      bottom: 0;
+    }
+    body{
+      justify-content: center;
+      .content-box{
+        align-self: center;
+        margin-left: 45%;
+      }
+    }
+    footer{
+      align-items: center;
+      .input-wrapper{
+        margin-left: 45%;
+      }
+    }
+  }
+}
