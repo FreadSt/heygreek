@@ -1,38 +1,353 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  justify-content: space-between;
+  .man{
+    position: absolute;
+    width: 410px;
+    height: 682px;
+    left: 2%;
+    z-index: 22;
+    bottom: 0;
   }
-  to {
-    transform: rotate(360deg);
+  .woman {
+    z-index: 22;
+    position: absolute;
+    width: 380px;
+    height: 652px;
+    left: 14%;
+    bottom: 0;
+  }
+  header{
+    padding: 10px 50px 20px 50px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 2px solid #282C38;
+    img{
+      width: 120px;
+      height: 32px;
+    }
+  }
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0 50px;
+    .content-box{
+      .promo{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 465px;
+        height: 200px;
+        z-index: 222;
+        margin-bottom: -15%;
+        img{
+          position: absolute;
+          left: 0;
+          z-index: -1;
+          width: 465px;
+          height: 220px;
+        }
+        .promo-text{
+          color: #FFF;
+          text-align: center;
+          leading-trim: both;
+          text-edge: cap;
+          width: 398px;
+          font-feature-settings: 'clig' off, 'liga' off;
+          font-family: WinnerCondExtraBold;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 127%; /* 43.18px */
+          letter-spacing: 2px;
+          margin-top: 14%;
+          margin-right: 5%;
+          height: 70px;
+        }
+      }
+      .poster{
+        text-align: left;
+        max-width: 754px;
+        font-family: WinnerCondExtraBold;
+        color: #FAFAFA;
+        text-shadow: -12px -12px #282C38,
+                      0  -12px#282C38,
+                      12px -12px #282C38,
+                      12px  0 #282C38,
+                      12px  12px #282C38,
+                      0  12px #282C38,
+                      -12px  12px #282C38,
+                      -12px  0  #282C38,
+                      -4px  4px  #282C38;
+        font-size: 5.5em;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 96%; /* 95.904px */
+        letter-spacing: 2.68px;
+        b{
+          color: #F1C658;
+        }
+      }
+    }
+  }
+  footer{
+    height: 40%;
+    border-top: 2px solid #282C38;
+    background: url("./assets/images/background.jpg") center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 50px;
+    position: relative;
+    .input-wrapper{
+      display: flex;
+      margin-bottom: 5%;
+      z-index: 222;
+      input{
+        border-radius: 16px;
+        border: 2px solid #282C38;
+        background: #FFF;
+        box-shadow: -5px 5px 0px 0px #282C38;
+        display: flex;
+        width: 397px;
+        height: 63px;
+        padding: 10px 15px;
+        align-items: center;
+        box-sizing: border-box;
+        margin-right: 20px;
+        z-index: 2;
+        outline: none;
+        font-size: 20px;
+        font-family: MontserratExtraBold;
+      }
+      input::placeholder{
+        font-family: MontserratExtraBold;
+        opacity: 1;
+        color: #282C38;
+      }
+      .button{
+        z-index: 2;
+        border-radius: 16px;
+        border: 2px solid #282C38;
+        background: #F1C658;
+        height: 63px;
+        box-shadow: -5px 5px 0px 0px #282C38;
+        padding: 0px 15px;
+        cursor: pointer;
+        box-sizing: border-box;
+        span{
+          margin-bottom: 15px;
+          color: #282C38;
+          font-family: WinnerCondExtraBold;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 0.6px;
+        }
+      }
+    }
+    .popUp{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: absolute;
+      align-self: center;
+      bottom: 2%;
+      width: 267px;
+      height: 34px;
+      background: #FFF;
+      padding: 10px 30px;
+      border-radius: 10px;
+      z-index: 222;
+      img{
+        margin-right: 2px;
+        width: 28px;
+        height: 28px;
+      }
+      span{
+        font-size: 15px;
+        font-family: MontserratSemiBold;
+        letter-spacing: -0.3px;
+      }
+    }
+  }
+}
+@media (max-width: 430px) {
+  .App{
+    width: 100%;
+    max-width: 430px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    .man, .woman{
+      display: none;
+    }
+    header{
+      width: 100%;
+      justify-content: center;
+      padding: 10px 50px;
+      box-sizing: border-box;
+    }
+    body{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      position: relative;
+      .form-box{
+        .input-wrapper{
+          display: flex;
+          flex-direction: column;
+          margin-top: 20px;
+          input{
+            border-radius: 16px;
+            border: 2px solid #282C38;
+            background: #FFF;
+            box-shadow: -5px 5px 0px 0px #282C38;
+            display: flex;
+            width: 100%;
+            max-width: 343px;
+            height: 63px;
+            padding: 10px 15px;
+            align-items: center;
+            box-sizing: border-box;
+            margin-right: 20px;
+            z-index: 2;
+            outline: none;
+            font-size: 20px;
+            font-family: MontserratExtraBold;
+          }
+          input::placeholder{
+            font-family: MontserratExtraBold;
+            opacity: 1;
+            color: #282C38;
+          }
+          .button{
+            margin-top: 20px;
+            border-radius: 16px;
+            border: 2px solid #282C38;
+            background: #F1C658;
+            height: 63px;
+            box-shadow: -5px 5px 0px 0px #282C38;
+            padding: 0px 15px;
+            cursor: pointer;
+            box-sizing: border-box;
+            span{
+              margin-bottom: 15px;
+              color: #282C38;
+              font-family: WinnerCondExtraBold;
+              font-size: 30px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              letter-spacing: 0.6px;
+            }
+          }
+        }
+        .popUp{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          position: absolute;
+          align-self: center;
+          top: 0;
+          width: 267px;
+          height: 34px;
+          background: #FFF;
+          padding: 10px 30px;
+          border-radius: 10px;
+          z-index: 222;
+          img{
+            margin-right: 2px;
+            width: 28px;
+            height: 28px;
+          }
+          span{
+            font-size: 15px;
+            font-family: MontserratSemiBold;
+            letter-spacing: -0.3px;
+          }
+        }
+      }
+      .content-box{
+        margin-top: 25px;
+        .promo{
+          max-width: 330px;
+          align-self: flex-start;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          img{
+            width: 320px;
+            height: 137px;
+          }
+          .promo-text{
+            margin-top: 20px;
+            margin-right: 15px;
+            max-width: 286px;
+            font-size: 22px;
+          }
+        }
+        .poster{
+          margin-bottom: 0;
+          max-width: 330px;
+          font-size: 58px;
+          text-shadow: -6px -6px #282C38,
+          0  -6px#282C38,
+          6px -6px #282C38,
+          6px  0 #282C38,
+          6px  6px #282C38,
+          0  6px #282C38,
+          -6px  6px #282C38,
+          -6px  0  #282C38,
+          -4px  4px  #282C38;
+        }
+      }
+    }
+  }
+}
+
+@media(min-width: 2260px) {
+  .App{
+    .man{
+      position: absolute;
+      width: 710px;
+      height: 1182px;
+      left: 6%;
+      z-index: 22;
+      bottom: 0;
+    }
+    .woman {
+      z-index: 22;
+      position: absolute;
+      width: 650px;
+      height: 1052px;
+      left: 24%;
+      bottom: 0;
+    }
+    body{
+      justify-content: center;
+      .content-box{
+        align-self: center;
+        margin-left: 30%;
+      }
+    }
+    footer{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .input-wrapper{
+        margin-left: 29%;
+        align-self: center;
+      }
+    }
   }
 }

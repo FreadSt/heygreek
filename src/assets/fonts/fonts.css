@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'WinnerCondExtraBold';
+    font-style: normal;
+    src: url('./Winner-CondExtraBold.ttf');
+    src: local('Winner-CondExtraBold.ttf'),
+    url('./Winner-CondExtraBold.ttf') format('truetype')
+}
+@font-face {
+    font-family: 'MontserratExtraBold';
+    font-style: normal;
+    src: url('./Montserrat-ExtraBold.ttf');
+    src: local('Montserrat-ExtraBold.ttf'),
+    url('./Montserrat-ExtraBold.ttf') format('truetype')
+}
+@font-face {
+    font-family: 'MontserratSemiBold';
+    font-style: normal;
+    src: url('./Montserrat-SemiBold.ttf');
+    src: local('Montserrat-SemiBold.ttf'),
+    url('./Montserrat-SemiBold.ttf') format('truetype')
+}
+
