@@ -1,7 +1,7 @@
 import './App.scss';
 import logo from "../src/assets/images/logo.png";
 import man from "../src/assets/images/image 471.png";
-import woman from "../src/assets/images/woman3.png";
+import woman from "../src/assets/images/image 43 2.png";
 import promo from "../src/assets/images/textbg.png";
 import {useState, useRef, useEffect} from 'react';
 import emailjs from 'emailjs-com';
