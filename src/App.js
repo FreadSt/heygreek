@@ -1,11 +1,12 @@
 import './App.scss';
 import logo from "../src/assets/images/logo.png";
 import man from "../src/assets/images/image 471.png";
-import woman from "../src/assets/images/woman.png";
+import woman from "../src/assets/images/woman3.png";
 import promo from "../src/assets/images/textbg.png";
 import {useState, useRef, useEffect} from 'react';
 import emailjs from 'emailjs-com';
 import check from "../src/assets/images/Check Square.png"
+import './style.css';
 
 function App() {
     const [email, setEmail] = useState({value:"", error:""})
@@ -31,7 +32,9 @@ function App() {
         setTestEmail(event.target.value);
         setIsFilled(true)
     };
-
+    const handleActiveButton = () => {
+        setIsActiveButton(true)
+    }
     console.log(isError, "error")
 
     useEffect(() => {
@@ -118,8 +121,12 @@ function App() {
                             onChange={handleChange}
                             type={'text'}
                         />
-                        <button className={'button'} onClick={sendEmail}>
-                            <span>Join the wait list</span>
+                        <button
+                            className={'button'}
+                            onClick={!isError && sendEmail}
+                            disabled={isError}
+                        >
+                            <div className={'span-text'}>Join the wait list</div>
                         </button>
                     </form>
                     {
@@ -145,14 +152,24 @@ function App() {
                             name={"user_email"}
                             value={testEmail}
                             onChange={handleChange}
+                            onClick={handleActiveButton}
                             type={'text'}
+                            className={isError === null ? null : 'invalid-input'}
                         />
-                        <button
-                            className={'button'}
-                            onClick={sendEmail}
-                        >
-                            <span>Join the wait list</span>
-                        </button>
+                        {
+                            isActiveButton ?
+                                <button
+                                    className={isError && isFilled || !isFilled ? 'button-disabled' : 'button'}
+                                    onClick={sendEmail}
+                                    disabled={isError}
+                                >
+                                    <div>Join the wait list</div>
+                                </button>
+                                :
+                                <button className={'default-button'}>
+                                    <div>Join the wait list</div>
+                                </button>
+                        }
                     </form>
                     {
                         !isError && isFilled && isSubmit?

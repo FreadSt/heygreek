@@ -6,8 +6,8 @@
   justify-content: space-between;
   .man{
     position: absolute;
-    width: 410px;
-    height: 682px;
+    width: 21.35vw;
+    height: 70.38vh;
     left: 2%;
     z-index: 22;
     bottom: 0;
@@ -15,8 +15,8 @@
   .woman {
     z-index: 22;
     position: absolute;
-    width: 380px;
-    height: 652px;
+    width: 19.84vw;
+    height: 67.49vh;
     left: 14%;
     bottom: 0;
   }
@@ -131,7 +131,32 @@
         opacity: 1;
         color: #282C38;
       }
-      .button{
+      .invalid-input[type='text']{
+        color: red;
+      }
+      .button-disabled{
+        z-index: 2;
+        border-radius: 16px;
+        border: 2px solid #282C38;
+        background: #FFF;
+        height: 63px;
+        box-shadow: -5px 5px 0px 0px #282C38;
+        padding: 0px 15px;
+        transition: .5s;
+        box-sizing: border-box;
+        div{
+          color: #282C38;
+          margin-bottom: 6px;
+          font-family: WinnerCondExtraBold;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 400;
+          letter-spacing: 0.6px;
+          vertical-align: center;
+          line-height: inherit;
+        }
+      }
+      .default-button, .button{
         z-index: 2;
         border-radius: 16px;
         border: 2px solid #282C38;
@@ -139,18 +164,22 @@
         height: 63px;
         box-shadow: -5px 5px 0px 0px #282C38;
         padding: 0px 15px;
-        cursor: pointer;
+        transition: .5s;
         box-sizing: border-box;
-        span{
-          margin-bottom: 15px;
+        div{
           color: #282C38;
+          margin-bottom: 6px;
           font-family: WinnerCondExtraBold;
           font-size: 30px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;
           letter-spacing: 0.6px;
+          vertical-align: center;
+          line-height: inherit;
         }
+      }
+      .button:hover{
+        cursor: url('./assets/images/Union.svg'), auto;
       }
     }
     .popUp{
@@ -240,7 +269,7 @@
             padding: 0px 15px;
             cursor: pointer;
             box-sizing: border-box;
-            span{
+            div{
               margin-bottom: 15px;
               color: #282C38;
               font-family: WinnerCondExtraBold;
@@ -249,6 +278,7 @@
               font-weight: 400;
               line-height: normal;
               letter-spacing: 0.6px;
+              margin-bottom: 5px;
             }
           }
         }
@@ -315,29 +345,64 @@
   }
 }
 
+
 @media(min-width: 2260px) {
   .App{
     .man{
       position: absolute;
-      width: 710px;
-      height: 1182px;
-      left: 6%;
+      width: 758px;
+      height: 1271px;
+      left: 4%;
       z-index: 22;
       bottom: 0;
     }
     .woman {
       z-index: 22;
       position: absolute;
-      width: 650px;
-      height: 1052px;
-      left: 24%;
+      width: 708px;
+      height: 1222px;
+      left: 18%;
       bottom: 0;
+    }
+    header{
+      padding: 30px 100px;
+      img{
+        width: 250px;
+        height: 68px;
+      }
     }
     body{
       justify-content: center;
       .content-box{
         align-self: center;
-        margin-left: 30%;
+        margin-right: -45%;
+        .poster{
+          font-size: 160px;
+          width: 100%;
+          max-width: 1200px;
+          margin-bottom: 50px;
+        }
+        .promo{
+          width: 735px;
+          height: 315px;
+          margin-bottom: -17.5%;
+          img{
+            width: 755px;
+            height: 345px;
+          }
+          .promo-text{
+            width: 100%;
+            max-width: 585px;
+            font-size: 51px;
+            color: #FFF;
+            text-align: center;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 127%; /* 64.77px */
+            letter-spacing: 2px;
+          }
+        }
       }
     }
     footer{
@@ -345,19 +410,31 @@
       flex-direction: column;
       align-items: center;
       .input-wrapper{
-        margin-left: 29%;
+        margin-right: -41%;
         align-self: center;
+        input{
+          font-size: 36px;
+          width: 654px;
+          height: 101px;
+        }
+        .button, .button-disabled, .default-button{
+          width: 490px;
+          height: 100px;
+          div{
+            font-size: 50px;
+          }
+        }
       }
     }
   }
 }
 
-@media(min-width: 1366px) and (max-width:2260px){
+@media (max-width: 1366px) and (max-height: 800px) {
   .App{
     .man{
       position: absolute;
-      width: 510px;
-      height: 782px;
+      width: 375px;
+      height: 624px;
       left: 6%;
       z-index: 22;
       bottom: 0;
@@ -365,8 +442,55 @@
     .woman {
       z-index: 22;
       position: absolute;
-      width: 470px;
-      height: 752px;
+      width: 350px;
+      height: 600px;
+      left: 17%;
+      bottom: 0;
+    }
+    body{
+      .content-box{
+        .poster{
+          margin: 0 0 25px;
+        }
+      }
+    }
+    footer{
+      .input-wrapper{
+        input{
+          font-size: 18px;
+        }
+        .button ,.default-button, .button-disabled{
+          width: 265px;
+          div{
+            text-align: inherit;
+            font-size: 25px;
+            color: #282C38;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(min-width: 1280px) and (max-width:2260px){
+  .App{
+    .man{
+      position: absolute;
+      width: 375px;
+      height: 624px;
+      left: 6%;
+      z-index: 22;
+      bottom: 0;
+    }
+    .woman {
+      z-index: 22;
+      position: absolute;
+      width: 350px;
+      height: 600px;
       left: 17%;
       bottom: 0;
     }
@@ -381,6 +505,18 @@
       align-items: center;
       .input-wrapper{
         margin-left: 45%;
+        .button, .default-button, .button-disabled{
+          width: 265px;
+          div{
+            text-align: inherit;
+            font-size: 25px;
+            color: #282C38;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.5px;
+          }
+        }
       }
     }
   }
