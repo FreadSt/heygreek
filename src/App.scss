@@ -375,7 +375,7 @@
       justify-content: center;
       .content-box{
         align-self: center;
-        margin-right: -45%;
+        margin-right: -22%;
         .poster{
           font-size: 160px;
           width: 100%;
@@ -391,6 +391,8 @@
             height: 345px;
           }
           .promo-text{
+            margin-top: 13%;
+            margin-left: 2%;
             width: 100%;
             max-width: 585px;
             font-size: 51px;
@@ -410,7 +412,7 @@
       flex-direction: column;
       align-items: center;
       .input-wrapper{
-        margin-right: -41%;
+        margin-right: -15%;
         align-self: center;
         input{
           font-size: 36px;
@@ -449,6 +451,7 @@
     }
     body{
       .content-box{
+        margin-left: 0;
         .poster{
           margin: 0 0 25px;
         }
@@ -498,13 +501,13 @@
       justify-content: center;
       .content-box{
         align-self: center;
-        margin-left: 45%;
+        margin-left: 18%;
       }
     }
     footer{
       align-items: center;
       .input-wrapper{
-        margin-left: 45%;
+        margin-left: 47%;
         .button, .default-button, .button-disabled{
           width: 265px;
           div{
